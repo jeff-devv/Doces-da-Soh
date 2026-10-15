@@ -152,6 +152,36 @@ footer strong{color:var(--amarelo)}
   .banner h1{font-size:2rem}
   .cart-panel{max-width:100%}
 }
+
+/* ---------- AJUSTES DE BOTÕES NO CELULAR ---------- */
+@media (max-width: 640px){
+  .header-inner{padding:10px 14px;gap:8px}
+  .brand{font-size:1.2rem;line-height:1.1}
+  .cart-btn{
+    padding:8px 12px;
+    font-size:.85rem;
+    flex-direction:row;
+    gap:6px;
+    white-space:nowrap;
+  }
+  .cart-btn > span:first-child{font-size:1rem}
+  .burger{
+    width:40px;height:40px;
+    border-radius:50%;
+    background:var(--roxo-claro);
+    color:var(--roxo-escuro);
+    font-size:1.3rem;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .whats-float{width:50px;height:50px;bottom:16px;right:16px;font-size:1.4rem}
+}
+
+/* botão do carrinho: manter ícone e texto na mesma linha */
+.cart-btn{white-space:nowrap}
+
+/* botões principais com toque mais confortável */
+.add-btn,.btn-primary,.btn-whats,.btn-secondary{min-height:44px}
+.add-btn:active,.cart-btn:active,.btn-primary:active{transform:scale(.97)}
 </style>
 </head>
 <body>
@@ -166,7 +196,7 @@ footer strong{color:var(--amarelo)}
     </nav>
     <div style="display:flex;align-items:center;gap:10px">
       <button class="cart-btn" id="btnAbrirCarrinho">
-        🛒 Carrinho <span class="cart-count" id="cartCount">0</span>
+        <span>🛒</span> <span>Carrinho</span> <span class="cart-count" id="cartCount">0</span>
       </button>
       <button class="burger" id="burger">☰</button>
     </div>
